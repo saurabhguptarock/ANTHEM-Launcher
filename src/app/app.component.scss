@@ -1,16 +1,29 @@
-.container {
+.background {
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+  width: 100%;
   background: url(../assets/background.jpg) no-repeat center fixed;
-  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
-  background-size: cover; /* version standardisée */
-
-  .title {
-    color: white;
-    margin: 0;
-    padding: 50px 20px;
+  // filter: blur(5px);
+  -webkit-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+}
+.close_icons {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: white;
+  &:hover {
+    color: grey;
+    cursor: pointer;
+  }
+}
+.underscore_icon {
+  position: absolute;
+  right: 40px;
+  top: 10px;
+  color: white;
+  &:hover {
+    color: grey;
+    cursor: pointer;
   }
 }
