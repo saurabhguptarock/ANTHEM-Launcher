@@ -10,11 +10,14 @@ function createWindow(): BrowserWindow {
   win = new BrowserWindow({
     width: 1280,
     height: 720,
+    frame: false,
     webPreferences: {
       nodeIntegration: true,
       allowRunningInsecureContent: serve ? true : false
     }
   });
+
+  win.removeMenu();
 
   if (serve) {
     require("electron-reload")(__dirname, {
