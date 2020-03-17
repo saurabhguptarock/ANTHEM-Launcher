@@ -42,7 +42,7 @@ export class AppComponent {
     }, 5000);
     var asd = __dirname.split("\\");
     asd.pop();
-    shell.openItem(join(dirname(asd.join("\\")), "ANTHEM", "demo.txt"));
+    shell.openItem(join(dirname(asd.join("\\")), "ANTHEM", "ANTHEM.exe"));
   }
   launch_social_media(launch_url: string) {
     if (launch_url == "website") shell.openExternal("https://saverl.com");
