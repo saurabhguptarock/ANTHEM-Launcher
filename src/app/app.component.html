@@ -5,28 +5,31 @@
 <div (click)="close_window()" class="close_icons">
   <i class="fa fa-times"></i>
 </div>
-<div class="main_image_section"></div>
 <div class="bottom_menu">
-  <div class="install_btn">
+  <div (click)="change_btn_status()" class="install_btn">
     {{ btn_status }}
   </div>
   <div class="game_install_status">
-    <div class="progress">
-      <div
-        class="progress-bar"
-        role="progressbar"
-        aria-valuenow="0"
-        aria-valuemin="0"
-        aria-valuemax="100"
-        style="width: 30%;"
-      ></div>
+    <div class="status_container">
+      {{ game_status }}
     </div>
     <div class="social_media">
-      <div class="Website_social_medias"><i class="fa fa-home"></i>Website</div>
-      <div class="Youtube_social_medias">
+      <div
+        (click)="launch_social_media('website')"
+        class="Website_social_medias"
+      >
+        <i class="fa fa-home"></i>Website
+      </div>
+      <div
+        (click)="launch_social_media('youtube')"
+        class="Youtube_social_medias"
+      >
         <i class="fa fa-youtube"></i>Youtube
       </div>
-      <div class="Facebook_social_medias">
+      <div
+        (click)="launch_social_media('facebook')"
+        class="Facebook_social_medias"
+      >
         <i class="fa fa-facebook-square"></i>Facebook
       </div>
     </div>
