@@ -10,6 +10,8 @@ import { remote } from "electron";
   styleUrls: ["./app.component.scss"]
 })
 export class AppComponent {
+  public btn_status: string = "INSTALL";
+
   constructor(
     public electronService: ElectronService,
     private translate: TranslateService

@@ -2,8 +2,7 @@
   height: 100%;
   width: 100%;
   background: url(../assets/background.jpg) no-repeat center fixed;
-  // filter: blur(5px);
-  -webkit-background-size: cover;
+  filter: blur(3px);
   background-size: cover;
   overflow: hidden;
 }
@@ -25,5 +24,97 @@
   &:hover {
     color: grey;
     cursor: pointer;
+  }
+}
+.main_image_section {
+  position: absolute;
+  height: 420px;
+  top: 100px;
+  left: 30px;
+  right: 30px;
+  background: url(../assets/background.jpg) no-repeat center fixed;
+}
+.bottom_menu {
+  height: 130px;
+  position: absolute;
+  bottom: 40px;
+  left: 30px;
+  display: flex;
+  font-family: "Fira Code", monospace;
+  right: 30px;
+  .install_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 3;
+    height: 100%;
+    font-size: 40px;
+    font-weight: bold;
+    background-color: #f2a900;
+    &:hover {
+      cursor: pointer;
+      background-color: #b47f04;
+    }
+  }
+  .game_install_status {
+    border: 1.5px solid grey;
+    margin-left: 10px;
+    display: flex;
+    flex: 7;
+    height: 100%;
+    .progress {
+      width: 75%;
+    }
+    .social_media {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 25%;
+      font-size: 18px;
+      font-weight: bold;
+      border-left: 1.5px solid grey;
+      .Youtube_social_medias {
+        height: 33.33%;
+        display: flex;
+        border-bottom: 1.5px solid grey;
+        justify-content: center;
+        color: grey;
+        align-items: center;
+        .fa {
+          margin-right: 10px;
+        }
+        &:hover {
+          cursor: pointer;
+          color: white;
+        }
+      }
+      .Facebook_social_medias {
+        height: 33.33%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .fa {
+          margin-right: 10px;
+        }
+        &:hover {
+          cursor: pointer;
+          color: white;
+        }
+      }
+      .Website_social_medias {
+        height: 33.33%;
+        border-bottom: 1.5px solid grey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .fa {
+          margin-right: 10px;
+        }
+        &:hover {
+          cursor: pointer;
+          color: white;
+        }
+      }
+    }
   }
 }
