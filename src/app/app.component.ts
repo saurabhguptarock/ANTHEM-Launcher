@@ -3,7 +3,7 @@ import { ElectronService } from "./core/services";
 import { TranslateService } from "@ngx-translate/core";
 import { AppConfig } from "../environments/environment";
 import { remote, shell } from "electron";
-
+import { join, dirname } from "path";
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
@@ -40,7 +40,9 @@ export class AppComponent {
     setTimeout(() => {
       this.btn_status = "START";
     }, 5000);
-    shell.openItem("Game/ANTHEM.exe");
+    var asd = __dirname.split("\\");
+    asd.pop();
+    shell.openItem(join(dirname(asd.join("\\")), "ANTHEM", "demo.txt"));
   }
   launch_social_media(launch_url: string) {
     if (launch_url == "website") shell.openExternal("https://saverl.com");
